@@ -3,7 +3,7 @@ name: Check and republish packages
 on:
   schedule:
 #    - cron: '*/15 6-20 * * 1-5'jobs:
-    - cron: '*/1 6-20 * * 1-5'
+    - cron: '* * * * *'
 jobs:
   republish:
     runs-on: ubuntu-latest
