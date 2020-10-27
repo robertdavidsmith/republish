@@ -1,0 +1,19 @@
+name: Check and republish packages
+
+on:
+  schedule:
+#    - cron: '*/15 6-20 * * 1-5'jobs:
+    - cron: '*/1 6-20 * * 1-5'jobs:
+jobs:
+  republish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check and republish packages
+#      uses: G-Research-Packages/check-and-republish-packages@v1
+      uses: robertdavidsmith/check-and-republish-packages@docker
+      with:
+        source-owner: G-Research
+        source-repo-workflow-branches: armada-infrastructure/ci/master
+        source-token: ${{secrets.READ_ARMADA_INFRASTRUCTURE_TOKEN}}
+        package-push-token: NOTSET
+
