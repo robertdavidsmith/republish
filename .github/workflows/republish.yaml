@@ -16,5 +16,6 @@ jobs:
         source-owner: G-Research
         source-repo-workflow-branches: armada-infrastructure/ci/master
         source-token: ${{secrets.READ_ARMADA_INFRASTRUCTURE_TOKEN}}
-        package-push-token: NOTSET
+        package-push-user: robertdavidsmith
+        package-push-token: ${{secrets.PACKAGE_PUSH_TOKEN}}
 
