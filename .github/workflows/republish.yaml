@@ -14,7 +14,7 @@ jobs:
       uses: robertdavidsmith/check-and-republish-packages@docker
       with:
         source-owner: G-Research
-        source-repo-workflow-branches: armada-infrastructure/ci/master
+        source-repo-workflow-branches: armada-infrastructure/build/master
         source-token: ${{secrets.READ_ARMADA_INFRASTRUCTURE_TOKEN}}
         package-push-user: robertdavidsmith
         package-push-token: ${{secrets.PACKAGE_PUSH_TOKEN}}
