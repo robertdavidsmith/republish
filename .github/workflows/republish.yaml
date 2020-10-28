@@ -9,6 +9,8 @@ jobs:
   republish:
     runs-on: ubuntu-latest
     steps:
+    - name: Set up Docker QEMU
+      uses: docker/setup-qemu-action@v1
     - name: Check and republish packages
 #      uses: G-Research-Packages/check-and-republish-packages@v1
       uses: robertdavidsmith/check-and-republish-packages@docker
